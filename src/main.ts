@@ -1,7 +1,10 @@
 import { createButton } from "./components/button";
 import { createContainer } from "./components/container";
+import { WidgetProps } from "./types";
 
-function injectWidget() {
+function init(settings: WidgetProps) {
+  console.log("Initializing widget with settings:", settings);
+
   const button = createButton();
   const container = createContainer();
 
@@ -10,5 +13,7 @@ function injectWidget() {
   document.body.appendChild(container);
 }
 
-// Automatically inject the button and square when the script is loaded
-injectWidget();
+if (typeof window !== "undefined") {
+  console.log("Setting FullyAIWidget on window object");
+  (window as any).FullyAIWidget = { init };
+}
