@@ -10,4 +10,7 @@ export default defineConfig({
     },
     minify: true, // Minify for production
   },
+  define: {
+    "process.env": {},
+  },
 });
