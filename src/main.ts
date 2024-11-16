@@ -3,7 +3,7 @@ import { openWidget } from "./events/open-widget";
 import { createButton } from "./components/button";
 import { createRoot } from "./components/root";
 
-function init(settings: WidgetProps) {
+export function init(settings: WidgetProps) {
   console.log("Initializing widget with settings:", settings);
 
   // Create root element

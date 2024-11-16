@@ -8,7 +8,6 @@ export function createRoot(settings: WidgetProps) {
   root.id = ROOT;
   root.style.position = "fixed";
   root.style.zIndex = "9999";
-  root.style.overflow = "hidden";
 
   // Position the root based on the settings
   switch (position) {

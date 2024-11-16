@@ -8,6 +8,7 @@ export function createIframe(settings: WidgetProps) {
   const iframe = document.createElement("iframe");
   iframe.id = IFRAME;
   iframe.src = URL;
+  iframe.style.position = "absolute";
   iframe.style.width = "100%";
   iframe.style.height = "100%";
   iframe.style.border = "none";

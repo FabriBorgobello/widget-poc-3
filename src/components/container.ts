@@ -1,4 +1,4 @@
-import { animate } from "motion/mini";
+import { animate } from "motion";
 import { CHAT_CONTAINER } from "../constants";
 
 export function createContainer() {
@@ -35,7 +35,7 @@ export function createContainer() {
       {
         onComplete: () => {
           console.log("Animation completed");
-          container.remove(); // Remove from DOM
+          container.remove(); // Remove from DOM TODO: Do not remove, just hide
         },
       }
     );
