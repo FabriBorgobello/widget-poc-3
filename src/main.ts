@@ -1,16 +1,14 @@
 import { createButton } from "./components/button";
-import { createContainer } from "./components/container";
 import { WidgetProps } from "./types";
 
 function init(settings: WidgetProps) {
   console.log("Initializing widget with settings:", settings);
 
+  // Create and append the button to the document
   const button = createButton();
-  const container = createContainer();
-
-  // Append button and container to the document
   document.body.appendChild(button);
-  document.body.appendChild(container);
+
+  console.log("Widget initialized. Button added to the DOM.");
 }
 
 if (typeof window !== "undefined") {

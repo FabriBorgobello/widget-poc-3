@@ -19,12 +19,12 @@ declare global {
   }
 
   // Extract settings from `data-*` attributes
-  const settings = {
+  const settings: WidgetProps = {
     companyId: script.dataset.companyId || "",
     assistantId: script.dataset.assistantId || "",
     position:
-      (script.dataset.position as WidgetProps["position"]) || "bottom-right", // Default position: bottom-right
-    delay: parseInt(script.dataset.delay || "0", 10), // Default delay: 0
+      (script.dataset.position as WidgetProps["position"]) || "bottom-right",
+    delay: parseInt(script.dataset.delay || "0", 10),
   };
 
   const loadWidget = () => {

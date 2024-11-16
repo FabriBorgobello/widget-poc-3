@@ -1,5 +1,6 @@
 import { animate } from "motion/mini";
 import { MAIN_BUTTON, MAIN_CONTAINER } from "../constants";
+import { createContainer } from "./container";
 
 export function createButton() {
   const button = document.createElement("button");
@@ -12,7 +13,16 @@ export function createButton() {
   button.style.display = "block";
 
   button.addEventListener("click", () => {
-    const container = document.getElementById(MAIN_CONTAINER)!;
+    // Check if the container already exists
+    let container = document.getElementById(MAIN_CONTAINER)!;
+
+    if (!container) {
+      // Create the container dynamically
+      container = createContainer();
+      document.body.appendChild(container);
+    }
+
+    // Make the container visible
     container.style.display = "block";
     animate(container, { opacity: 1 });
   });

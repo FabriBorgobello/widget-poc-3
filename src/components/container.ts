@@ -34,7 +34,7 @@ export function createContainer() {
       {
         onComplete: () => {
           console.log("Animation completed");
-          container.style.display = "none";
+          container.remove(); // Remove from DOM
         },
       }
     );
