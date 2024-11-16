@@ -9,14 +9,13 @@ export function createContainer() {
   container.style.height = "300px";
   container.style.backgroundColor = "#ffffff";
   container.style.border = "1px solid #ccc";
-  container.style.position = "fixed";
-  container.style.top = "50%";
-  container.style.left = "50%";
-  container.style.transform = "translate(-50%, -50%)";
+  container.style.borderRadius = "16px";
   container.style.display = "none"; // Initially hidden
-  container.style.zIndex = "1000";
   container.style.opacity = "0";
   container.style.overflow = "hidden"; // Ensure clean display of iframe
+  container.style.position = "absolute";
+  container.style.bottom = "55px"; // Position above the button (improve)
+  container.style.right = "0";
 
   // Add a close button inside the container
   const closeButton = document.createElement("button");

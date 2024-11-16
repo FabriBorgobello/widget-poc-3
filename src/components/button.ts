@@ -7,7 +7,6 @@ export function createButton() {
   button.style.padding = "10px 20px";
   button.style.fontSize = "16px";
   button.style.cursor = "pointer";
-  button.style.margin = "20px auto";
   button.style.display = "block";
 
   return button;
