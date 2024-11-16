@@ -1,10 +1,10 @@
 import { animate } from "motion/mini";
-import { MAIN_CONTAINER } from "../constants";
+import { CHAT_CONTAINER } from "../constants";
 
 export function createContainer() {
   // Container
   const container = document.createElement("div");
-  container.id = MAIN_CONTAINER;
+  container.id = CHAT_CONTAINER;
   container.style.width = "300px";
   container.style.height = "300px";
   container.style.backgroundColor = "#ffffff";
@@ -16,6 +16,7 @@ export function createContainer() {
   container.style.display = "none"; // Initially hidden
   container.style.zIndex = "1000";
   container.style.opacity = "0";
+  container.style.overflow = "hidden"; // Ensure clean display of iframe
 
   // Add a close button inside the container
   const closeButton = document.createElement("button");
@@ -25,6 +26,7 @@ export function createContainer() {
   closeButton.style.right = "10px";
   closeButton.style.padding = "5px 10px";
   closeButton.style.cursor = "pointer";
+  closeButton.style.zIndex = "1001"; // Ensure button is above the iframe
 
   // Add close functionality
   closeButton.addEventListener("click", () => {
@@ -40,7 +42,6 @@ export function createContainer() {
     );
   });
 
-  // Append close button to the container
   container.appendChild(closeButton);
 
   return container;

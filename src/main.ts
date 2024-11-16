@@ -1,16 +1,22 @@
-import { createButton } from "./components/button";
 import { WidgetProps } from "./types";
+import { openWidget } from "./events/open-widget";
+import { createButton } from "./components/button";
+import { createRoot } from "./components/root";
 
 function init(settings: WidgetProps) {
   console.log("Initializing widget with settings:", settings);
 
-  // Create and append the button to the document
-  const button = createButton();
-  document.body.appendChild(button);
+  // Create root element
+  const root = createRoot(settings);
+  document.body.appendChild(root);
 
-  console.log("Widget initialized. Button added to the DOM.");
+  // Create and append the button to the root element
+  const button = createButton();
+  button.addEventListener("click", () => openWidget(settings));
+  root.appendChild(button);
 }
 
+// Expose the init function on the window object
 if (typeof window !== "undefined") {
   console.log("Setting FullyAIWidget on window object");
   (window as any).FullyAIWidget = { init };
