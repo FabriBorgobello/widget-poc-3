@@ -29,7 +29,7 @@ declare global {
 
   const loadWidget = () => {
     const WIDGET_CDN_URL =
-      "https://cdn.jsdelivr.net/gh/FabriBorgobello/widget-poc-3@0.0.8/dist/widget/my-widget.iife.js";
+      "https://cdn.jsdelivr.net/gh/FabriBorgobello/widget-poc-3@0.0.9/dist/widget/my-widget.iife.js";
 
     const script = document.createElement("script");
     script.src = WIDGET_CDN_URL;

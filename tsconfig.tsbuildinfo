@@ -1,15 +1,1 @@
-{
-  "root": [
-    "./src/constants.ts",
-    "./src/loader.ts",
-    "./src/main.ts",
-    "./src/types.ts",
-    "./src/vite-env.d.ts",
-    "./src/components/button.ts",
-    "./src/components/container.ts",
-    "./src/components/iframe.ts",
-    "./src/components/root.ts",
-    "./src/events/open-widget.ts"
-  ],
-  "version": "5.6.3"
-}
+{"root":["./src/constants.ts","./src/dev.ts","./src/loader.ts","./src/main.ts","./src/types.ts","./src/vite-env.d.ts","./src/components/button.ts","./src/components/container.ts","./src/components/iframe.ts","./src/components/root.ts","./src/events/open-widget.ts"],"version":"5.6.3"}
